@@ -1,0 +1,14 @@
+h1 {
+  text-transform: capitalize;
+}
+.aula {
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid red;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
