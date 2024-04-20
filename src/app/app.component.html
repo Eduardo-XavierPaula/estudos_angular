@@ -1,15 +1,15 @@
 <div class="aula two_way_data_binding">
   <h1>two way data binding</h1>
   <div class="flex-col">
-    <label>Nome:</label>
+    <label>Nome (input e output):</label>
     <input
       type="text"
       [ngModel]="name"
       (ngModelChange)="handleInputChange($event)"
     />
-    <label>Nome:</label>
+    <label>Nome (two way data binding):</label>
     <input type="text" [(ngModel)]="name" />
-    <label>Nome:</label>
+    <label>Nome (two way data binding e output):</label>
     <input
       type="text"
       [(ngModel)]="name"
@@ -17,8 +17,52 @@
     />
   </div>
   <h2>Nome digitado: {{ name }}</h2>
-  <!--
-    [ngModel]="name"
-    (ngModelChange)="handleInputChange($event)"
-  -->
+</div>
+<div class="aula NgIf">
+  <h1>NgIf</h1>
+  <button (click)="toggleProp()">Toggle</button>
+  <div style="background-color: green" *ngIf="minhaProp">1 Sou uma div!</div>
+  <div style="background-color: orange" *ngIf="isTruthy()">
+    2 Sou uma div! (invocado por método)
+  </div>
+  <div style="background-color: yellow" *ngIf="isFalsy()">
+    3 Sou uma div! (invocado por método)
+  </div>
+  <div style="background-color: red" *ngIf="minhaProp; else meuTemplate">
+    4 Sou uma div! (com if)
+  </div>
+  <ng-template #meuTemplate>
+    <div style="background-color: red">5 Sou uma outra div! (else)</div>
+  </ng-template>
+
+  <ng-container *ngIf="minhaProp; then meuTemplate2; else meuOutroTemplate">
+  </ng-container>
+  <ng-template #meuTemplate2>
+    <div style="background-color: grey">6 Sou a div then!</div>
+  </ng-template>
+  <ng-template #meuOutroTemplate>
+    <div style="background-color: grey">7 Sou a div else!</div>
+  </ng-template>
+</div>
+<div class="aula NgFor">
+  <h1>NgFor</h1>
+  <div class="list">
+    <app-person
+      *ngFor="
+        let person of listPeople;
+        let i = index;
+        let isFirst = first;
+        let isLast = last;
+        let isOdd = odd
+      "
+      [personName]="person.name"
+      [personAge]="person.age"
+      [personIndex]="i"
+      [isFirst]="isFirst"
+      [isLast]="isLast"
+      [isOdd]="isOdd"
+      [isSelected]="personSelectedIndex === i"
+      (personSelected)="selectPerson($event)"
+    ></app-person>
+  </div>
 </div>
