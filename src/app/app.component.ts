@@ -94,4 +94,18 @@ export class AppComponent {
   setToOrange() {
     this.isGreen = false;
   }
+  // Pipes
+  text: string = 'Felipe';
+  pessoa = {
+    name: 'Felipe',
+    status: 1,
+  };
+  pessoa2 = {
+    name: 'Matheus',
+    status: 2,
+  };
+  pessoa3 = {
+    name: 'Luís',
+    status: 3,
+  };
 }
