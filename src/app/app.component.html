@@ -1,5 +1,5 @@
 <div class="aula two_way_data_binding">
-  <h1>two way data binding</h1>
+  <h2>two way data binding</h2>
   <div class="flex-col">
     <label>Nome (input e output):</label>
     <input
@@ -19,7 +19,7 @@
   <h2>Nome digitado: {{ name }}</h2>
 </div>
 <div class="aula NgIf">
-  <h1>NgIf</h1>
+  <h2>NgIf</h2>
   <button (click)="toggleProp()">Toggle</button>
   <div style="background-color: green" *ngIf="minhaProp">1 Sou uma div!</div>
   <div style="background-color: orange" *ngIf="isTruthy()">
@@ -45,7 +45,7 @@
   </ng-template>
 </div>
 <div class="aula NgFor">
-  <h1>NgFor</h1>
+  <h2>NgFor</h2>
   <div class="list">
     <app-person
       *ngFor="
@@ -65,4 +65,73 @@
       (personSelected)="selectPerson($event)"
     ></app-person>
   </div>
+</div>
+<div class="aula NgStyle">
+  <h2>NgStyle</h2>
+  <h3
+    [ngStyle]="{
+    'font-size': fontSize + 'px',
+    color: textColor,
+  }"
+  >
+    Sou um h3
+  </h3>
+  <h3 [ngStyle]="stylesObj">Sou um h3</h3>
+  <h3 [style.font-size.px]="fontSize" [style.color]="textColor">
+    Sou outro h3
+  </h3>
+  <h3 [style]="stylesString">Sou um terceiro h3</h3>
+
+  <button (click)="increaseFontSize()">+A</button>
+  <button (click)="toggleFontColor()">{{ buttonText }}</button>
+</div>
+<div class="aula NgClass">
+  <h2>NgClass</h2>
+  <div class="grid">
+    <h3
+      [ngClass]="{
+      'is-big is-green': isGreen,
+      'is-orange': !isGreen,
+    }"
+    >
+      Sou um h3
+    </h3>
+    <h3
+      [class]="{
+      'is-green': isGreen,
+      'is-orange': !isGreen,
+    }"
+    >
+      Sou um h3
+    </h3>
+    <!-- string -->
+    <h3 [ngClass]="'is-big is-green'">Sou um h3</h3>
+    <h3 [class]="'is-big is-green'">Sou um h3</h3>
+    <!-- array -->
+    <h3 [ngClass]="['is-big', 'is-green']">Sou um h3</h3>
+    <h3 [class]="['is-big', 'is-green']">Sou um h3</h3>
+    <!-- objetos -->
+    <h3 [ngClass]="{ 'is-green': isGreen, 'is-orange': !isGreen }">
+      Sou um h3
+    </h3>
+    <h3 [class]="{ 'is-green': isGreen, 'is-orange': !isGreen }">Sou um h3</h3>
+    <!-- Diferença (objetos) -->
+    <h3 [ngClass]="{ 'is-big is-green': isGreen, 'is-orange': !isGreen }">
+      Sou um h3
+    </h3>
+    <h3
+      [class]="{
+        'is-big': isGreen,
+        'is-green': isGreen,
+        'is-orange': !isGreen
+      }"
+    >
+      Sou um h3
+    </h3>
+    <h3 [ngClass]="{ 'is-green': isGreen }">Sou um h3</h3>
+    <h3 [class.is-green]="isGreen">Sou um h3</h3>
+  </div>
+
+  <button (click)="setToGreen()">Verde</button>
+  <button (click)="setToOrange()">Laranja</button>
 </div>
