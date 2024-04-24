@@ -1,0 +1,22 @@
+<div class="aula NgFor">
+  <h2>NgFor</h2>
+  <div class="list">
+    <app-person
+      *ngFor="
+        let person of listPeople;
+        let i = index;
+        let isFirst = first;
+        let isLast = last;
+        let isOdd = odd
+      "
+      [personName]="person.name"
+      [personAge]="person.age"
+      [personIndex]="i"
+      [isFirst]="isFirst"
+      [isLast]="isLast"
+      [isOdd]="isOdd"
+      [isSelected]="personSelectedIndex === i"
+      (personSelected)="selectPerson($event)"
+    ></app-person>
+  </div>
+</div>

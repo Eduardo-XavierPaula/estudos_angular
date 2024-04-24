@@ -1,0 +1,20 @@
+<div class="aula two_way_data_binding">
+  <h2>two way data binding</h2>
+  <div class="flex-col">
+    <label>Nome (input e output):</label>
+    <input
+      type="text"
+      [ngModel]="name"
+      (ngModelChange)="handleInputChange($event)"
+    />
+    <label>Nome (two way data binding):</label>
+    <input type="text" [(ngModel)]="name" />
+    <label>Nome (two way data binding e output):</label>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      (ngModelChange)="handleInputChange($event)"
+    />
+  </div>
+  <h2>Nome digitado: {{ name }}</h2>
+</div>

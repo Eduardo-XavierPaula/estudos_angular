@@ -1,0 +1,26 @@
+<div class="aula NgIf">
+  <h2>NgIf</h2>
+  <button (click)="toggleProp()">Toggle</button>
+  <div style="background-color: green" *ngIf="minhaProp">1 Sou uma div!</div>
+  <div style="background-color: orange" *ngIf="isTruthy()">
+    2 Sou uma div! (invocado por método)
+  </div>
+  <div style="background-color: yellow" *ngIf="isFalsy()">
+    3 Sou uma div! (invocado por método)
+  </div>
+  <div style="background-color: red" *ngIf="minhaProp; else meuTemplate">
+    4 Sou uma div! (com if)
+  </div>
+  <ng-template #meuTemplate>
+    <div style="background-color: red">5 Sou uma outra div! (else)</div>
+  </ng-template>
+
+  <ng-container *ngIf="minhaProp; then meuTemplate2; else meuOutroTemplate">
+  </ng-container>
+  <ng-template #meuTemplate2>
+    <div style="background-color: grey">6 Sou a div then!</div>
+  </ng-template>
+  <ng-template #meuOutroTemplate>
+    <div style="background-color: grey">7 Sou a div else!</div>
+  </ng-template>
+</div>

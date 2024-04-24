@@ -1,0 +1,50 @@
+<div class="aula NgClass">
+  <h2>NgClass</h2>
+  <div class="grid">
+    <h3
+      [ngClass]="{
+      'is-big is-green': isGreen,
+      'is-orange': !isGreen,
+    }"
+    >
+      Sou um h3
+    </h3>
+    <h3
+      [class]="{
+      'is-green': isGreen,
+      'is-orange': !isGreen,
+    }"
+    >
+      Sou um h3
+    </h3>
+    <!-- string -->
+    <h3 [ngClass]="'is-big is-green'">Sou um h3</h3>
+    <h3 [class]="'is-big is-green'">Sou um h3</h3>
+    <!-- array -->
+    <h3 [ngClass]="['is-big', 'is-green']">Sou um h3</h3>
+    <h3 [class]="['is-big', 'is-green']">Sou um h3</h3>
+    <!-- objetos -->
+    <h3 [ngClass]="{ 'is-green': isGreen, 'is-orange': !isGreen }">
+      Sou um h3
+    </h3>
+    <h3 [class]="{ 'is-green': isGreen, 'is-orange': !isGreen }">Sou um h3</h3>
+    <!-- Diferença (objetos) -->
+    <h3 [ngClass]="{ 'is-big is-green': isGreen, 'is-orange': !isGreen }">
+      Sou um h3
+    </h3>
+    <h3
+      [class]="{
+        'is-big': isGreen,
+        'is-green': isGreen,
+        'is-orange': !isGreen
+      }"
+    >
+      Sou um h3
+    </h3>
+    <h3 [ngClass]="{ 'is-green': isGreen }">Sou um h3</h3>
+    <h3 [class.is-green]="isGreen">Sou um h3</h3>
+  </div>
+
+  <button (click)="setToGreen()">Verde</button>
+  <button (click)="setToOrange()">Laranja</button>
+</div>

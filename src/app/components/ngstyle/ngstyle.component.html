@@ -1,0 +1,19 @@
+<div class="aula NgStyle">
+  <h2>NgStyle</h2>
+  <h3
+    [ngStyle]="{
+    'font-size': fontSize + 'px',
+    color: textColor,
+  }"
+  >
+    Sou um h3
+  </h3>
+  <h3 [ngStyle]="stylesObj">Sou um h3</h3>
+  <h3 [style.font-size.px]="fontSize" [style.color]="textColor">
+    Sou outro h3
+  </h3>
+  <h3 [style]="stylesString">Sou um terceiro h3</h3>
+
+  <button (click)="increaseFontSize()">+A</button>
+  <button (click)="toggleFontColor()">{{ buttonText }}</button>
+</div>

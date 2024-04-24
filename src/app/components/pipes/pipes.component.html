@@ -1,0 +1,21 @@
+<div class="aula Pipes">
+  <h2>Pipes</h2>
+  <p>
+    {{ text.toUpperCase() }}
+  </p>
+  <p>
+    {{ text | uppercase }}
+  </p>
+  <p>
+    {{ pessoa | json }}
+  </p>
+  <p [class]="pessoa.status | statusClass">
+    {{ pessoa.name }}
+  </p>
+  <p [class]="pessoa2.status | statusClass">
+    {{ pessoa2.name }}
+  </p>
+  <p [class]="pessoa3.status | statusClass">
+    {{ pessoa3.name }}
+  </p>
+</div>
