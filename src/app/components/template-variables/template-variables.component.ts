@@ -10,4 +10,8 @@ export class TemplateVariablesComponent {
   changeDetection() {
     this._cdRef.detectChanges();
   }
+  clicou(input: HTMLInputElement) {
+    console.log(input.value);
+    input.value = 'atualizado';
+  }
 }

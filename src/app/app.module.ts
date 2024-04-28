@@ -13,9 +13,12 @@ import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
 import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgifComponent } from './components/ngif/ngif.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
+import { EscopoComponent } from './components/escopo/escopo.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
+import { ViewChildFilhoComponent } from './components/view-child-filho/view-child-filho.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent],
+  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

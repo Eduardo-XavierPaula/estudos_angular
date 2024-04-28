@@ -1,0 +1,10 @@
+<div class="aula escopo">
+  <h2>escopo</h2>
+  <div class="primo">
+    <!-- Primo: {{ inputPai.value }} -->
+  </div>
+  <div class="pai" *ngIf="true">
+    <input #inputPai ngModel />
+    <div class="filho" *ngIf="true">Filho: {{ inputPai.value }}</div>
+  </div>
+</div>

@@ -1,9 +1,10 @@
 <div class="aula TemplateVariables">
   <h2>Template Variables</h2>
-  <input type="text" #meuInput />
-  <!-- <input type="text" #meuInput ngModel /> -->
+  <!-- <input type="text" #meuInput /> -->
+  <input type="text" #meuInput ngModel />
 
   Valor: {{ meuInput.value }}
 
-  <button (click)="changeDetection()">Atualizar</button>
+  <!-- <button (click)="changeDetection()">Atualizar</button> -->
+  <button (click)="clicou(meuInput)">Atualizar com parâmetro</button>
 </div>

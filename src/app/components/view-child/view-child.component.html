@@ -1,0 +1,12 @@
+<div class="aula view-child">
+  <h2>view-child</h2>
+  Meu input: <input type="text" #meuInput />
+  <button (click)="updateInputText()">Atualizar</button>
+  <button (click)="focus()">Foco</button>
+
+  <div #minhaDivEl>Conteúdo inicial</div>
+  <button (click)="updateDivContent()">Atualizar</button>
+  <h3>Com componente filho</h3>
+  <app-view-child-filho #filhoComp></app-view-child-filho>
+  <button (click)="hello()">Atualizar</button>
+</div>
