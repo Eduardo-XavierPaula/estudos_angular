@@ -1,0 +1,14 @@
+<div class="aula view-children">
+  <h2>view-children e acesso a elementos no HTML</h2>
+  <button
+    #meuButton
+    class="btn-{{ i }}"
+    *ngFor="let btn of buttonsList; let i = index"
+    (click)="changeColor($event)"
+  >
+    {{ btn }}
+  </button>
+  <button (click)="resetButtons()">Resetar</button>
+  <button (click)="first()">Pegar o Primeiro</button>
+  <button (click)="remove()">Remover Item</button>
+</div>

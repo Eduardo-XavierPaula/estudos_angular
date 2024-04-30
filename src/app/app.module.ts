@@ -16,9 +16,10 @@ import { TwoWayDataBindingComponent } from './components/two-way-data-binding/tw
 import { EscopoComponent } from './components/escopo/escopo.component';
 import { ViewChildComponent } from './components/view-child/view-child.component';
 import { ViewChildFilhoComponent } from './components/view-child-filho/view-child-filho.component';
+import { ViewChildrenComponent } from './components/view-children/view-children.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent],
+  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

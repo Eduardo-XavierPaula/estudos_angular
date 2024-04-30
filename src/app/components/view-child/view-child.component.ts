@@ -1,4 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { ViewChildFilhoComponent } from '../view-child-filho/view-child-filho.component';
 
 @Component({
@@ -6,10 +12,14 @@ import { ViewChildFilhoComponent } from '../view-child-filho/view-child-filho.co
   templateUrl: './view-child.component.html',
   styleUrl: './view-child.component.scss',
 })
-export class ViewChildComponent {
+export class ViewChildComponent implements OnInit, AfterViewInit {
   @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
   @ViewChild('minhaDivEl') minhaDivEl!: ElementRef<HTMLInputElement>;
+
   @ViewChild('filhoComp') filhoCompRef!: ViewChildFilhoComponent;
+
+  @ViewChild('meuInput2') meuInputEl2!: ElementRef<HTMLInputElement>;
+
   updateInputText() {
     this.meuInputEl.nativeElement.value = 'Texto atualizado';
   }
@@ -22,5 +32,17 @@ export class ViewChildComponent {
   hello() {
     this.filhoCompRef.dizerOi();
     this.filhoCompRef.message = 'Eu disse "Oi"!';
+  }
+
+  constructor() {
+    console.log('constructor');
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit');
+  }
+
+  ngAfterViewInit(): void {
+    this.meuInputEl2.nativeElement.focus();
   }
 }
