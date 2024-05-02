@@ -17,9 +17,11 @@ import { EscopoComponent } from './components/escopo/escopo.component';
 import { ViewChildComponent } from './components/view-child/view-child.component';
 import { ViewChildFilhoComponent } from './components/view-child-filho/view-child-filho.component';
 import { ViewChildrenComponent } from './components/view-children/view-children.component';
+import { DiretivaComponent } from './components/diretiva/diretiva.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent],
+  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
