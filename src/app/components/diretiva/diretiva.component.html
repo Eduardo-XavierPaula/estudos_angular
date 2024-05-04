@@ -1,4 +1,21 @@
-<div class="aula diretiva">
-  <h2>diretiva</h2>
+<div class="aula diretivas">
+  <h2>diretivas</h2>
   <p appHighlight>Sou um paragrafo com diretiva</p>
+
+  <button [disabled]="true">Meu botão</button>
+  <button [disabled]="false">Meu botão</button>
+  <button [attr.disabled]="false">Meu botão</button>
+  <button appDisabled>Meu botão attr diretiva</button>
+
+  <p appStyle>Paragrafo</p>
+  <p appClass>Paragrafo</p>
+
+  <input type="text" appListener />
+  <input type="text" appInputBackground bgColor1="blue" textColor="white" />
+  <input
+    type="text"
+    appInputBackground
+    [bgColor1]="appBgColor"
+    textColor="white"
+  />
 </div>

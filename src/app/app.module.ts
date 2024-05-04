@@ -19,9 +19,14 @@ import { ViewChildFilhoComponent } from './components/view-child-filho/view-chil
 import { ViewChildrenComponent } from './components/view-children/view-children.component';
 import { DiretivaComponent } from './components/diretiva/diretiva.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { DisabledDirective } from './directives/disabled.directive';
+import { StyleDirective } from './directives/style.directive';
+import { ClassDirective } from './directives/class.directive';
+import { ListenerDirective } from './directives/listener.directive';
+import { InputBackgroundDirective } from './directives/input-background.directive';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective],
+  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective, DisabledDirective, StyleDirective, ClassDirective, ListenerDirective, InputBackgroundDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
