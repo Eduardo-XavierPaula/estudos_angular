@@ -43,6 +43,6 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.meuInputEl2.nativeElement.focus();
+    // this.meuInputEl2.nativeElement.focus();
   }
 }

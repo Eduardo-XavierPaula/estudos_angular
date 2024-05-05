@@ -24,9 +24,11 @@ import { StyleDirective } from './directives/style.directive';
 import { ClassDirective } from './directives/class.directive';
 import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
+import { ElementRefComponent } from './components/element-ref/element-ref.component';
+import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective, DisabledDirective, StyleDirective, ClassDirective, ListenerDirective, InputBackgroundDirective],
+  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective, DisabledDirective, StyleDirective, ClassDirective, ListenerDirective, InputBackgroundDirective, ElementRefComponent, FocusSecondInputDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
