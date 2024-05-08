@@ -1,0 +1,10 @@
+<div class="aula xss">
+  <h2>XSS</h2>
+  <div>
+    <label>Exemplo: </label>
+    <p>{{ exemplo }}</p>
+  </div>
+
+  <input type="text" placeholder="Digite algo ..." #meuInput />
+  <button (click)="createElement(meuInput.value)">Criar elemento</button>
+</div>

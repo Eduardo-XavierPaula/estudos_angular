@@ -26,9 +26,10 @@ import { ListenerDirective } from './directives/listener.directive';
 import { InputBackgroundDirective } from './directives/input-background.directive';
 import { ElementRefComponent } from './components/element-ref/element-ref.component';
 import { FocusSecondInputDirective } from './directives/focus-second-input.directive';
+import { XssComponent } from './components/xss/xss.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective, DisabledDirective, StyleDirective, ClassDirective, ListenerDirective, InputBackgroundDirective, ElementRefComponent, FocusSecondInputDirective],
+  declarations: [AppComponent, PersonComponent, StatusClassPipe, TemplateVariablesComponent, PipesComponent, NgclassComponent, NgstyleComponent, NgforComponent, NgifComponent, TwoWayDataBindingComponent, EscopoComponent, ViewChildComponent, ViewChildFilhoComponent, ViewChildrenComponent, DiretivaComponent, HighlightDirective, DisabledDirective, StyleDirective, ClassDirective, ListenerDirective, InputBackgroundDirective, ElementRefComponent, FocusSecondInputDirective, XssComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
