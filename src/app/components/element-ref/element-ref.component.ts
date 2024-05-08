@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { TestService } from '../../services/teste.service';
 
 @Component({
   selector: 'app-element-ref',
@@ -14,7 +15,10 @@ import {
 export class ElementRefComponent implements OnInit, AfterViewInit {
   @ViewChild('minhaDiv') divEl!: ElementRef<HTMLDivElement>;
 
-  constructor(private readonly _elRef: ElementRef) {}
+  constructor(
+    private readonly _elRef: ElementRef,
+    private readonly _testeService: TestService
+  ) {}
 
   ngOnInit(): void {
     const divEl = this._elRef.nativeElement.querySelector(
@@ -44,5 +48,9 @@ export class ElementRefComponent implements OnInit, AfterViewInit {
       '.elementRef'
     ) as HTMLDivElement;
     container.appendChild(novaDiv);
+  }
+
+  createElementViaService() {
+    this._testeService.create(this._elRef);
   }
 }
