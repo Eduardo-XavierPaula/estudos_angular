@@ -1,10 +1,13 @@
 <div class="aula xss">
   <h2>XSS</h2>
   <div>
-    <label>Exemplo: </label>
+    <label>Exemplo de XSS: </label>
     <p>{{ exemplo }}</p>
   </div>
 
   <input type="text" placeholder="Digite algo ..." #meuInput />
   <button (click)="createElement(meuInput.value)">Criar elemento</button>
+  <button (click)="createElementCorrect(meuInput.value)">
+    Criar elemento protegido
+  </button>
 </div>
